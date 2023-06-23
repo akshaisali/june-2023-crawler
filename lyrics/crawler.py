@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 
 import models
-import lyrics.utils as utils
+import utils as utils
 
 db = psycopg2.connect("dbname=lyrics")
 

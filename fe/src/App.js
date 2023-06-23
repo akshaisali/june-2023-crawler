@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 import { useState, useRef, useEffect } from 'react';
@@ -9,7 +8,7 @@ function App() {
     const [artists, setArtists] = useState([]);
 
     useEffect(() => {
-        axios.get("http://44.199.206.209:8000//api/v1/artist")
+        axios.get("http://127.0.0.01:8000//api/v1/artist")
             .then((resp) => {
                 setArtists(resp.data.artists);
             });
@@ -22,7 +21,7 @@ function App() {
           <ol>
                           {artists.map(((artist, idx)=><li key={`artist${artist.id}`}>
                                         <a 
-                                        href={`http://44.199.206.209:8000/api/v1/artist/${artist.id}`}
+                                        href={`http://127.0.0.01:8000/api/v1/artist/${artist.id}`}
 
                                         >{artist.name}
                                         </a>
