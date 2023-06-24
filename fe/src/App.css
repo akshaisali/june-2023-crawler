@@ -58,3 +58,35 @@ ul.a {
 
 
 
+.track-item {
+  /* Your desired animation styles for track names */
+  animation-name: fade-in;
+  animation-duration: 0.5s;
+  /* Add more animation properties as needed */
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.artist-item {
+  /* Your desired animation styles for artist names */
+  animation-name: slide-in;
+  animation-duration: 0.5s;
+  /* Add more animation properties as needed */
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
