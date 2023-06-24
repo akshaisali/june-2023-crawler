@@ -48,21 +48,21 @@ function App() {
           <div className="col">
             
           <h2> Artists </h2>
-          <ol>
+          <ul>
                           {artists.map(((artist, idx)=><li key={`artist${artist.id}`}>
                                         <a 
                                         href={`http://127.0.0.01:8000/api/v1/artist/${artist.id}`}
                                         onClick={onClickHandlerTracks}
-                                        artist_id={artist.id}
-
-                                        >{artist.name}
+                                        artist_id={artist.id}>{artist.name}
                                         </a>
                                         </li>))}
-          </ol>
+            </ul>
           </div>
           <div className="col">
           <h2> Tracks </h2>
+          
           <ul>
+                
                     {tracks.map(((track, idx) => <li key={`track${track.id}`}>
                         <a
                             href={`http://127.0.0.1:8000/api/v1/song/${track.id}`}
@@ -71,14 +71,15 @@ function App() {
                         >{track.name}
                         </a>
                     </li>))}
-                </ul>
+             </ul>
+             
           </div>
           <div className="col">
            <h2> Lyrics </h2>
             {lyrics.map(((lyric, idx) => 
                 <div key={idx}>
                     <div><h2>{lyric.name}</h2></div>
-                    <div style={{ whiteSpace: 'pre-line' }}>{lyric.lyrics}</div>
+                    <div class="lyrics">{lyric.lyrics}</div>
                 </div>))}
           </div>
           </div>
