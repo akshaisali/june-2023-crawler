@@ -27,8 +27,8 @@ function App() {
     
                 });
         }
-        }
-  return (
+        
+    return (
           <div className="row">
           <div className="col">
           <h2> Artists </h2>
@@ -50,7 +50,7 @@ function App() {
                     {tracks.map(((track, idx) => <li key={`track${track.id}`}>
                         <a
                             href={`http://127.0.0.1:8000/api/v1/song/${track.id}`}
-                            onClick={onClickHandlerLyrics}
+
                             track_id={track.id}
                         >{track.name}
                         </a>
