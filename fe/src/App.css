@@ -53,7 +53,7 @@ li {
 
 ul.a {
   color: #302f2f;
-  text-decoration:none; /* Remove underline */
+  
 }
 
 
@@ -89,4 +89,23 @@ ul.a {
     transform: translateX(0);
     opacity: 1;
   }
+}
+.artists,.lyrics{
+  text-decoration:none; /* Remove underline */
+}
+.lyrics-item{
+  animation-name: slide-in;
+  animation-duration: 0.5s;
+  /* Add more animation properties as needed */
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+}
 }
