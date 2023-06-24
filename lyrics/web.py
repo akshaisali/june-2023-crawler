@@ -26,6 +26,18 @@ def api_artist(artist_id):
     print(dir(artist))
     ret = [{"id": i.id, "name": i.name} for i in artist.tracks]
     return jsonify(dict(tracks=ret))
+    
+@app.route("/api/v1/song/<song_id>")
+def lyrics(song_id):
+    print(request.headers)
+    db = models.init_db(app)
+    artists = db.session.execute(db.select(models.Artist)).scalars()
+    track = db.session.execute(
+        db.select(models.Tracks).filter(models.Tracks.id == song_id)
+    ).scalar()
+    # track.lyrics = track.lyrics.replace("\n", "<br/>")
+    lyrics = {"name": track.name, "lyrics": track.lyrics}
+    return jsonify(lyrics)
 
 
 @app.route("/")
