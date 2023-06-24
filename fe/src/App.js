@@ -49,7 +49,7 @@ function App() {
             
           <h2> Artists </h2>
           <ul>
-                          {artists.map(((artist, idx)=><li key={`artist${artist.id}`}>
+                          {artists.map(((artist, idx)=><li key={`artist${artist.id}`}style={{ animationDelay: `${idx * 0.2}s` }} className="artist-item">
                                         <a 
                                         href={`http://127.0.0.01:8000/api/v1/artist/${artist.id}`}
                                         onClick={onClickHandlerTracks}
@@ -63,7 +63,7 @@ function App() {
           
           <ul>
                 
-                    {tracks.map(((track, idx) => <li key={`track${track.id}`}>
+                    {tracks.map(((track, idx) => <li key={`track${track.id}`} style={{ animationDelay: `${idx * 0.2}s` }} className="track-item">
                         <a
                             href={`http://127.0.0.1:8000/api/v1/song/${track.id}`}
                             onClick={onClickHandlerLyrics}
@@ -78,7 +78,7 @@ function App() {
            <h2> Lyrics </h2>
             {lyrics.map(((lyric, idx) => 
                 <div key={idx}>
-                    <div><h2>{lyric.name}</h2></div>
+                    <div><h2 >{lyric.name}</h2></div>
                     <div class="lyrics">{lyric.lyrics}</div>
                 </div>))}
           </div>
