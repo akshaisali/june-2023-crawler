@@ -1,7 +1,9 @@
 /* App.css */
+
 .row {
   display: flex;
 }
+
 .display-1{
   font-family: cursive;
   font-size: xx-large;
@@ -26,7 +28,7 @@ h2 {
 ul {
  
   text-align: center;
-  color: #fcf8f8;
+  list-style-type: none;
   text-decoration: none;
   font-style: italic;
 }
@@ -48,6 +50,7 @@ li {
   white-space: pre-line;
   text-align: center;
   font-style: italic;
+  color: #fcf8f8;
 
 }
 
@@ -74,10 +77,10 @@ ul.a {
   }
 }
 .artist-item {
-  /* Your desired animation styles for artist names */
+
   animation-name: slide-in;
   animation-duration: 0.5s;
-  /* Add more animation properties as needed */
+  
 }
 
 @keyframes slide-in {
@@ -92,6 +95,7 @@ ul.a {
 }
 .artists,.lyrics{
   text-decoration:none; /* Remove underline */
+  color: #000000;
 }
 .lyrics-item{
   animation-name: slide-in;
@@ -108,4 +112,33 @@ ul.a {
     transform: translateX(0);
     opacity: 1;
 }
+}
+.lyricsh2{
+  color: #fcf8f8;
+}
+footer{
+  font-family: cursive;
+  font-style: italic;
+  text-align: center;
+  bottom: auto;
+}
+
+.buttonartists{
+           
+  
+background-image: linear-gradient(to right, #6a3093 0%, #a044ff  51%, #6a3093  100%);
+width: 100%;
+margin: 5px;
+text-align: center;
+transition: 0.5s;
+background-size: 200% auto;
+color: white;            
+box-shadow: 0 0 20px #eee;
+border-radius: 10px;
+display: block;
+background-position: right center; /* change the direction of the change here */
+color: #fff;
+text-decoration: none;
+
+ 
 }
