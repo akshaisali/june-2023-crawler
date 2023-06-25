@@ -53,7 +53,7 @@ function App() {
                                         <a className='artists'
                                         href={`http://127.0.0.01:8000/api/v1/artist/${artist.id}`}
                                         onClick={onClickHandlerTracks}
-                                        artist_id={artist.id}>{artist.name}
+                                        artist_id={artist.id}><button class="buttonartists">{artist.name}</button>
                                         </a>
                                         </li>))}
             </ul>
@@ -78,7 +78,7 @@ function App() {
            <h2> Lyrics </h2>
             {lyrics.map(((lyric, idx) => 
                 <div key={idx}style={{ animationDelay: `${idx * 0.6}s` }} className="lyrics-item">
-                    <div><h2 >{lyric.name}</h2></div>
+                    <div className="lyricsh2"><h2  >{lyric.name}</h2></div>
                     <div class="lyrics">{lyric.lyrics}</div>
                 </div>))}
           </div>
