@@ -3,18 +3,23 @@
 .row {
   display: flex;
 }
-
+#containerfluid{
+opacity: 0.6;
+}
 .display-1{
   font-family: cursive;
   font-size: xx-large;
   text-align: center;
   font-style: italic;
+  color: #fff;
 }
 .col {
   flex: 1;
   padding: 20px;
 }
-
+.h2lyrics,.h2artists,.h2tracks{
+  color: #fff;
+}
 
 h2 {
   margin-bottom: 10px;
@@ -22,6 +27,7 @@ h2 {
   font-size: medium;
   text-align: center;
   font-style: italic;
+  
 
 }
 
@@ -37,7 +43,12 @@ li {
   margin-bottom: 5px;
 }
 
-
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(70deg, rgba(122, 8, 122, 1) 30%, rgba(22, 22, 35, 1) 30%, rgba(22, 22, 35, 1) 100%);
+  background-position: center center;
+}
 .lyric-container {
   margin-top: 20px;
 }
@@ -46,13 +57,7 @@ li {
   margin-bottom: 10px;
 }
 
-.lyrics{
-  white-space: pre-line;
-  text-align: center;
-  font-style: italic;
-  color: #fcf8f8;
 
-}
 
 ul.a {
   color: #302f2f;
@@ -113,6 +118,14 @@ ul.a {
     opacity: 1;
 }
 }
+.lyrics{
+  font-family: cursive;
+   white-space: pre-line;
+  text-align: center;
+  font-style: italic;
+  color: #fcf8f8;
+}
+
 .lyricsh2{
   color: #fcf8f8;
 }
@@ -121,23 +134,25 @@ footer{
   font-style: italic;
   text-align: center;
   bottom: auto;
+  color: #ecdede;
 }
 
-.buttonartists{
+.buttonartists,.buttontracks{
            
   
-background-image: linear-gradient(to right, #6a3093 0%, #a044ff  51%, #6a3093  100%);
+background-image: linear-gradient(to right, #8857ac 0%, #954fdb  51%, #823093  100%);
 width: 100%;
 margin: 5px;
 text-align: center;
 transition: 0.5s;
-background-size: 200% auto;
-color: white;            
-box-shadow: 0 0 20px #eee;
-border-radius: 10px;
+background-size: 100% auto;
+color: rgb(236, 227, 227);            
+box-shadow: 0 0 20px #665966;
+border-radius: 25px;
 display: block;
 background-position: right center; /* change the direction of the change here */
 color: #fff;
+font-family: cursive;
 text-decoration: none;
 
  
