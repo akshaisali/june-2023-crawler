@@ -47,7 +47,7 @@ function App() {
           <div className="row">
           <div className="col">
             
-          <h2> Artists </h2>
+          <h2 class="h2artists"> Artists </h2>
           <ul>
                           {artists.map(((artist, idx)=><li key={`artist${artist.id}`}style={{ animationDelay: `${idx * 0.2}s` }} className="artist-item">
                                         <a className='artists'
@@ -59,7 +59,7 @@ function App() {
             </ul>
           </div>
           <div className="col">
-          <h2> Tracks </h2>
+          <h2 class="h2tracks"> Tracks </h2>
           
           <ul>
                 
@@ -67,15 +67,14 @@ function App() {
                         <a className='lyrics'
                             href={`http://127.0.0.1:8000/api/v1/song/${track.id}`}
                             onClick={onClickHandlerLyrics}
-                            track_id={track.id}
-                        >{track.name}
+                            track_id={track.id} ><button class="buttontracks">{track.name}</button>
                         </a>
                     </li>))}
              </ul>
              
           </div>
           <div className="col">
-           <h2> Lyrics </h2>
+           <h2 class="h2lyrics"> Lyrics </h2>
             {lyrics.map(((lyric, idx) => 
                 <div key={idx}style={{ animationDelay: `${idx * 0.6}s` }} className="lyrics-item">
                     <div className="lyricsh2"><h2  >{lyric.name}</h2></div>
