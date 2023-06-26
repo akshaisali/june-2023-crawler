@@ -26,12 +26,12 @@ def crawl_artists(data, count=10):
       Parses the input HTML, find the list of artists. Creates a list as mentioned in outputs and returns the list
     
     """
-    soup = BeautifulSoup(data, features="html.parser") # Create soup
-    artists = soup.find_all("td", {"class": "td-last"}) # Search for all artist td nodes
-    ret = []
-    for i in artists: # For each td node
-        a = i.find("a") # Get the anchor inside the td
-        ret.append((a.text.strip(), a["href"])) # Extract the name and target from anchor
+    soup = BeautifulSoup(data, features="html.parser") # Create a BeautifulSoup object by parsing the HTML data
+    artists = soup.find_all("td", {"class": "td-last"}) # Search for all artist td nodes in the BeautifulSoup object
+    ret = []# Initialize an empty list to store the artist information
+    for i in artists: # Iterate over each artist td node
+        a = i.find("a")# Find the first anchor tag inside the current artist td node
+        ret.append((a.text.strip(), a["href"])) # Extract the name and target from the anchor tag and append them to the 'ret' list
         if count is not None:
             count -= 1
             if count == 0:
