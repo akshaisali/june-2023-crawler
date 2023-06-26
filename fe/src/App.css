@@ -3,15 +3,20 @@
 .row {
   display: flex;
 }
-#containerfluid{
-opacity: 0.6;
+.containerfluid{
+
+  background: linear-gradient(70deg, rgb(83, 77, 83) 30%, rgb(154, 71, 187) 30%, rgba(22, 22, 35, 1) 100%);
+
+}
+.lyricshub{
+  color: #fcdadd;
 }
 .display-1{
   font-family: cursive;
   font-size: xx-large;
   text-align: center;
   font-style: italic;
-  color: #fff;
+  
 }
 .col {
   flex: 1;
@@ -128,6 +133,7 @@ ul.a {
 
 .lyricsh2{
   color: #fcf8f8;
+
 }
 footer{
   font-family: cursive;
@@ -156,4 +162,12 @@ font-family: cursive;
 text-decoration: none;
 
  
+}
+.lyricsscroll{
+  height: 600px;
+  overflow-y: scroll;
+  
+}
+.lyricsscroll::-webkit-scrollbar{
+  display: none;
 }
