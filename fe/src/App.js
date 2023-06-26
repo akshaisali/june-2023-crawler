@@ -75,12 +75,15 @@ function App() {
              
           </div>
           <div className="col">
+            <div className='lyricsscroll'>
            <h2 class="h2lyrics"> Lyrics </h2>
             {lyrics.map(((lyric, idx) => 
                 <div key={idx}style={{ animationDelay: `${idx * 0.6}s` }} className="lyrics-item">
-                    <div className="lyricsh2"><h2  >{lyric.name}</h2></div>
+                    <div className="lyricsh2"><h2 >{lyric.name}</h2></div>
                     <div class="lyrics">{lyric.lyrics}</div>
+                    
                 </div>))}
+                </div>    
           </div>
           </div>
   );
