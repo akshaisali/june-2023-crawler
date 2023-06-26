@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+header {
+  height: 100vh;
+  background-image: url('https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  box-shadow: inset 10 10 10px #0e0d0d;
+ justify-content: center;
+
+  }
+  .headerh1{
+    
+    font-family: cursive;
+    color: azure;
+    margin-top: 10cm;
+  }
+  .para1{
+    text-align: center;
+    color: azure;
+  }
