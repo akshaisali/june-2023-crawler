@@ -43,12 +43,12 @@ li {
   margin-bottom: 5px;
 }
 
-body {
+/* body {
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(70deg, rgba(122, 8, 122, 1) 30%, rgba(22, 22, 35, 1) 30%, rgba(22, 22, 35, 1) 100%);
   background-position: center center;
-}
+} */
 .lyric-container {
   margin-top: 20px;
 }
@@ -133,13 +133,13 @@ footer{
   font-family: cursive;
   font-style: italic;
   text-align: center;
-  bottom: auto;
+  bottom: fixed;
   color: #ecdede;
+  
 }
 
 .buttonartists,.buttontracks{
-           
-  
+      
 background-image: linear-gradient(to right, #8857ac 0%, #954fdb  51%, #823093  100%);
 width: 100%;
 margin: 5px;
